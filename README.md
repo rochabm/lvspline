@@ -1,2 +1,2 @@
 # lvspline
-Parametrized Left Ventricle Generation (backend: Gmsh)
+Parametrized Left Ventricle Geometry and Mesh Generator (backend: Gmsh)
