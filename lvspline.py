@@ -734,9 +734,8 @@ def createFibers(baseName, params):
     domains = MeshFunction("size_t", mesh, baseName + '_fenics_facet_region.xml')
     
     for facet in facets(mesh):
-	mesh.domains().set_marker((facet.index(), domains[facet]), 2)
-        
-    
+        mesh.domains().set_marker((facet.index(), domains[facet]), 2)
+       
     fiber_angle_epi = params['fiber_angle_epi']
     fiber_angle_endo = params['fiber_angle_endo']
     sheet_angle_endo = params['sheet_angle_endo']
@@ -754,7 +753,7 @@ def createFibers(baseName, params):
     elif params['fiber_type'] == "orthotropic":
         fibers_to_carpfile_ortho(mesh, fib, she, crs, baseName)
     else:
-        print 'Error: fiber type not defined!'
+        print('Error: fiber type not defined!')
         exit(0)
 
 # ------------------------------------------------------------------------------
